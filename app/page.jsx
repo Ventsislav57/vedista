@@ -3,6 +3,8 @@ import Image from "next/image";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import Hero from "@/components/Hero";
 import Marquee from "@/components/Marquee";
+import PriceTicker from "@/components/PriceTicker";
+import PriceBoard from "@/components/PriceBoard";
 import SectionHeading from "@/components/SectionHeading";
 import Reveal from "@/components/Reveal";
 import Counter from "@/components/Counter";
@@ -16,6 +18,7 @@ export default function HomePage() {
   return (
     <>
       <Hero />
+      <PriceTicker />
       <Marquee />
 
       {/* About */}
@@ -115,6 +118,8 @@ export default function HomePage() {
           </Reveal>
         </div>
       </section>
+
+      <PriceBoard />
 
       {/* Crops */}
       <section className="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:py-28">

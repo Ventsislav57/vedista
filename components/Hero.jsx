@@ -202,7 +202,6 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-cream to-transparent" />
     </section>
   );
 }
