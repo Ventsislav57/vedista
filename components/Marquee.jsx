@@ -16,12 +16,12 @@ const defaultItems = [
 export default function Marquee({ items = defaultItems }) {
   const row = [...items, ...items];
   return (
-    <div className="relative flex overflow-hidden border-y border-forest-900/10 bg-sand/50 py-6">
+    <div className="relative flex overflow-hidden border-y border-ocean-900/10 bg-sand/50 py-6">
       <div className="animate-marquee flex shrink-0 items-center gap-16 pr-16">
         {row.map((p, i) => (
           <span
             key={i}
-            className="whitespace-nowrap font-display text-lg text-forest-800/45"
+            className="whitespace-nowrap font-display text-lg text-ocean-800/45"
           >
             {p}
           </span>
@@ -34,7 +34,7 @@ export default function Marquee({ items = defaultItems }) {
         {row.map((p, i) => (
           <span
             key={i}
-            className="whitespace-nowrap font-display text-lg text-forest-800/45"
+            className="whitespace-nowrap font-display text-lg text-ocean-800/45"
           >
             {p}
           </span>

@@ -25,7 +25,7 @@ export default function ContactPage() {
         <div className="grid gap-10 lg:grid-cols-[1fr_1.1fr] lg:gap-16">
           <div>
             <Reveal>
-              <div className="rounded-3xl border border-forest-900/10 bg-forest-900 p-8 text-cream sm:p-10">
+              <div className="rounded-3xl border border-ocean-900/10 bg-ocean-900 p-8 text-cream sm:p-10">
                 <h2 className="font-display text-2xl">
                   Какво да включите в запитването
                 </h2>
@@ -71,8 +71,8 @@ export default function ContactPage() {
           <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {team.map((m, i) => (
               <Reveal key={i} delay={i * 0.08}>
-                <div className="flex h-full flex-col gap-4 rounded-3xl border border-dashed border-forest-900/20 bg-cream/60 p-6">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-forest-900/8 text-forest-700/60">
+                <div className="flex h-full flex-col gap-4 rounded-3xl border border-dashed border-ocean-900/20 bg-cream/60 p-6">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-ocean-900/8 text-ocean-700/60">
                     <User className="h-6 w-6" strokeWidth={1.5} />
                   </div>
                   <div className="space-y-2 text-sm">
@@ -93,10 +93,10 @@ export default function ContactPage() {
 
 function Row({ icon: I, label, value }) {
   return (
-    <div className="flex items-center gap-2.5 text-forest-800/50">
+    <div className="flex items-center gap-2.5 text-ocean-800/50">
       <I className="h-3.5 w-3.5 shrink-0" strokeWidth={1.6} />
       <span className="text-xs uppercase tracking-wide">{label}:</span>
-      <span className="italic text-forest-800/40">{value}</span>
+      <span className="italic text-ocean-800/40">{value}</span>
     </div>
   );
 }

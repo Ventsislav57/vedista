@@ -17,7 +17,7 @@ export default function AppleIcon() {
         }}
       >
         <svg width="132" height="132" viewBox="0 0 48 48" fill="none">
-          <circle cx="24" cy="24" r="23" fill="#10281e" />
+          <circle cx="24" cy="24" r="23" fill="#0f2438" />
           <g stroke="#e3a72f" strokeWidth="2.6" strokeLinecap="round">
             <path d="M24 38V15" />
           </g>

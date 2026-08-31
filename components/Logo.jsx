@@ -6,7 +6,7 @@ export default function Logo({ className = "h-9 w-9" }) {
       fill="none"
       aria-hidden="true"
     >
-      <circle cx="24" cy="24" r="23" fill="#10281e" />
+      <circle cx="24" cy="24" r="23" fill="#0f2438" />
       <g stroke="#e3a72f" strokeWidth="2" strokeLinecap="round">
         <path d="M24 38V15" />
         <path d="M24 16c-2.6-1-4-3.4-4-6.5C22.6 10.5 24 12.9 24 16Z" fill="#e3a72f" />

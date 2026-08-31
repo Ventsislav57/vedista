@@ -33,7 +33,7 @@ export default function ContactForm() {
   }
 
   return (
-    <div className="rounded-[2rem] border border-forest-900/10 bg-cream p-7 shadow-soft sm:p-9">
+    <div className="rounded-[2rem] border border-ocean-900/10 bg-cream p-7 shadow-soft sm:p-9">
       <AnimatePresence mode="wait">
         {sent ? (
           <motion.div
@@ -42,19 +42,19 @@ export default function ContactForm() {
             animate={{ opacity: 1, scale: 1 }}
             className="flex flex-col items-center py-10 text-center"
           >
-            <div className="flex h-14 w-14 items-center justify-center rounded-full bg-forest-600 text-cream">
+            <div className="flex h-14 w-14 items-center justify-center rounded-full bg-ocean-600 text-cream">
               <Check className="h-7 w-7" />
             </div>
-            <h3 className="mt-5 font-display text-2xl text-forest-900">
+            <h3 className="mt-5 font-display text-2xl text-ocean-900">
               Благодарим!
             </h3>
-            <p className="mt-2 max-w-sm text-sm text-forest-800/70">
+            <p className="mt-2 max-w-sm text-sm text-ocean-800/70">
               Получихме запитването ви. Ще се свържем с вас възможно
               най-скоро.
             </p>
             <button
               onClick={() => setSent(false)}
-              className="mt-6 text-sm font-semibold text-forest-700 underline underline-offset-4"
+              className="mt-6 text-sm font-semibold text-ocean-700 underline underline-offset-4"
             >
               Ново запитване
             </button>
@@ -77,11 +77,11 @@ export default function ContactForm() {
             </div>
             <div className="grid gap-5 sm:grid-cols-2">
               <label className="text-sm">
-                <span className="font-medium text-forest-900">Продукт</span>
+                <span className="font-medium text-ocean-900">Продукт</span>
                 <select
                   name="product"
                   defaultValue=""
-                  className="mt-1.5 w-full rounded-xl border border-forest-900/15 bg-cream px-4 py-2.5 text-sm outline-none focus:border-wheat-500"
+                  className="mt-1.5 w-full rounded-xl border border-ocean-900/15 bg-cream px-4 py-2.5 text-sm outline-none focus:border-wheat-500"
                 >
                   <option value="" disabled>
                     Изберете продукт
@@ -98,22 +98,22 @@ export default function ContactForm() {
               <Field label="Ориентировъчно количество (т)" name="qty" type="number" />
             </div>
             <label className="text-sm">
-              <span className="font-medium text-forest-900">Съобщение</span>
+              <span className="font-medium text-ocean-900">Съобщение</span>
               <textarea
                 name="message"
                 rows={4}
-                className="mt-1.5 w-full resize-none rounded-xl border border-forest-900/15 bg-cream px-4 py-2.5 text-sm outline-none focus:border-wheat-500"
+                className="mt-1.5 w-full resize-none rounded-xl border border-ocean-900/15 bg-cream px-4 py-2.5 text-sm outline-none focus:border-wheat-500"
                 placeholder="Разкажете накратко какво търсите — реколта, срок, регион."
               />
             </label>
-            <label className="flex items-start gap-2.5 text-xs text-forest-800/70">
-              <input type="checkbox" required className="mt-0.5 accent-forest-700" />
+            <label className="flex items-start gap-2.5 text-xs text-ocean-800/70">
+              <input type="checkbox" required className="mt-0.5 accent-ocean-700" />
               Съгласен съм личните ми данни да бъдат обработени за целите на
               запитването.
             </label>
             <button
               type="submit"
-              className="group inline-flex items-center justify-center gap-2 rounded-full bg-forest-900 px-7 py-3.5 text-sm font-semibold text-cream transition-transform duration-300 hover:-translate-y-0.5 hover:bg-forest-800"
+              className="group inline-flex items-center justify-center gap-2 rounded-full bg-ocean-900 px-7 py-3.5 text-sm font-semibold text-cream transition-transform duration-300 hover:-translate-y-0.5 hover:bg-ocean-800"
             >
               Изпрати запитване
               <Send className="h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -128,7 +128,7 @@ export default function ContactForm() {
 function Field({ label, name, type = "text", required }) {
   return (
     <label className="text-sm">
-      <span className="font-medium text-forest-900">
+      <span className="font-medium text-ocean-900">
         {label}
         {required && <span className="text-wheat-600"> *</span>}
       </span>
@@ -136,7 +136,7 @@ function Field({ label, name, type = "text", required }) {
         type={type}
         name={name}
         required={required}
-        className="mt-1.5 w-full rounded-xl border border-forest-900/15 bg-cream px-4 py-2.5 text-sm outline-none focus:border-wheat-500"
+        className="mt-1.5 w-full rounded-xl border border-ocean-900/15 bg-cream px-4 py-2.5 text-sm outline-none focus:border-wheat-500"
       />
     </label>
   );

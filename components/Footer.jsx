@@ -5,8 +5,8 @@ import Logo from "@/components/Logo";
 
 export default function Footer() {
   return (
-    <footer className="relative overflow-hidden bg-forest-950 text-cream/80">
-      <div className="pointer-events-none absolute -right-24 -top-24 h-80 w-80 rounded-full bg-forest-700/30 blur-3xl" />
+    <footer className="relative overflow-hidden bg-ocean-950 text-cream/80">
+      <div className="pointer-events-none absolute -right-24 -top-24 h-80 w-80 rounded-full bg-ocean-700/30 blur-3xl" />
       <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:py-20">
         <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr_1fr]">
           <div>

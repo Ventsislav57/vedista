@@ -41,17 +41,17 @@ export default function InternationalTradePage() {
       <section className="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:py-28">
         <div className="grid gap-10 lg:grid-cols-2 lg:items-center lg:gap-16">
           <Reveal direction="left">
-            <div className="relative overflow-hidden rounded-[2rem] border border-forest-900/10 bg-forest-900 p-10 sm:p-14">
+            <div className="relative overflow-hidden rounded-[2rem] border border-ocean-900/10 bg-ocean-900 p-10 sm:p-14">
               <div className="pointer-events-none absolute -right-10 -top-10 h-56 w-56 rounded-full bg-wheat-500/15 blur-3xl" />
               <svg
                 viewBox="0 0 300 220"
                 className="relative z-10 h-full w-full"
                 aria-hidden="true"
               >
-                <circle cx="150" cy="110" r="86" fill="none" stroke="#2d6a4f" strokeWidth="1.5" />
-                <ellipse cx="150" cy="110" rx="86" ry="34" fill="none" stroke="#2d6a4f" strokeWidth="1.2" />
-                <ellipse cx="150" cy="110" rx="40" ry="86" fill="none" stroke="#2d6a4f" strokeWidth="1.2" />
-                <line x1="64" y1="110" x2="236" y2="110" stroke="#2d6a4f" strokeWidth="1.2" />
+                <circle cx="150" cy="110" r="86" fill="none" stroke="#2f6796" strokeWidth="1.5" />
+                <ellipse cx="150" cy="110" rx="86" ry="34" fill="none" stroke="#2f6796" strokeWidth="1.2" />
+                <ellipse cx="150" cy="110" rx="40" ry="86" fill="none" stroke="#2f6796" strokeWidth="1.2" />
+                <line x1="64" y1="110" x2="236" y2="110" stroke="#2f6796" strokeWidth="1.2" />
                 {[
                   [150, 60],
                   [96, 92],
@@ -80,14 +80,14 @@ export default function InternationalTradePage() {
               {points.map((p, i) => (
                 <Reveal key={p.title} delay={i * 0.08}>
                   <div className="flex gap-4">
-                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-forest-900 text-wheat-400">
+                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-ocean-900 text-wheat-400">
                       <Icon name={p.icon} className="h-5 w-5" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-forest-900">
+                      <h3 className="font-semibold text-ocean-900">
                         {p.title}
                       </h3>
-                      <p className="mt-1 text-sm leading-relaxed text-forest-800/70">
+                      <p className="mt-1 text-sm leading-relaxed text-ocean-800/70">
                         {p.text}
                       </p>
                     </div>

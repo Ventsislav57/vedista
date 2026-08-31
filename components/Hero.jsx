@@ -55,9 +55,9 @@ export default function Hero() {
   return (
     <section
       ref={ref}
-      className="grain relative flex min-h-[92vh] items-center overflow-hidden bg-gradient-to-b from-forest-950 via-forest-900 to-forest-800 pt-28 pb-16 text-cream"
+      className="grain relative flex min-h-[92vh] items-center overflow-hidden bg-gradient-to-b from-ocean-950 via-ocean-900 to-ocean-800 pt-28 pb-16 text-cream"
     >
-      <div className="pointer-events-none absolute -left-40 top-10 h-[32rem] w-[32rem] rounded-full bg-forest-600/25 blur-3xl" />
+      <div className="pointer-events-none absolute -left-40 top-10 h-[32rem] w-[32rem] rounded-full bg-ocean-600/25 blur-3xl" />
       <div className="pointer-events-none absolute -right-24 top-1/4 h-96 w-96 rounded-full bg-wheat-500/12 blur-3xl" />
 
       <div className="relative z-10 mx-auto grid w-full max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
@@ -115,7 +115,7 @@ export default function Hero() {
           >
             <Link
               href="/kontakti"
-              className="group flex items-center gap-2 rounded-full bg-wheat-500 px-7 py-3.5 text-sm font-semibold text-forest-950 shadow-lift transition-transform duration-300 hover:-translate-y-0.5"
+              className="group flex items-center gap-2 rounded-full bg-wheat-500 px-7 py-3.5 text-sm font-semibold text-ocean-950 shadow-lift transition-transform duration-300 hover:-translate-y-0.5"
             >
               Изпратете запитване
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -148,12 +148,12 @@ export default function Hero() {
           style={{ y: yField }}
           className="rise relative hidden lg:block"
         >
-          <div className="relative aspect-[42/34] overflow-hidden rounded-[2rem] border border-cream/10 bg-forest-900 shadow-lift">
+          <div className="relative aspect-[42/34] overflow-hidden rounded-[2rem] border border-cream/10 bg-ocean-900 shadow-lift">
             <svg viewBox="0 0 420 340" className="block h-full w-full" aria-hidden="true">
               <defs>
                 <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0" stopColor="#1b4332" />
-                  <stop offset="1" stopColor="#2d6a4f" />
+                  <stop offset="0" stopColor="#235079" />
+                  <stop offset="1" stopColor="#2f6796" />
                 </linearGradient>
               </defs>
               <rect width="420" height="340" fill="url(#sky)" />
@@ -181,15 +181,15 @@ export default function Hero() {
               ].map(([x, d, s, t], i) => (
                 <Stalk key={`f${i}`} x={x} y={334} delay={d} scale={s} tone={t} />
               ))}
-              <rect y="312" width="420" height="28" fill="#10281e" />
+              <rect y="312" width="420" height="28" fill="#0f2438" />
             </svg>
           </div>
 
-          <div className="animate-floaty absolute -left-8 top-14 flex items-center gap-3 rounded-2xl bg-cream px-4 py-3 text-forest-900 shadow-lift">
-            <LineChart className="h-5 w-5 text-forest-600" />
+          <div className="animate-floaty absolute -left-8 top-14 flex items-center gap-3 rounded-2xl bg-cream px-4 py-3 text-ocean-900 shadow-lift">
+            <LineChart className="h-5 w-5 text-ocean-600" />
             <div>
               <div className="text-sm font-semibold">Пазарна цена</div>
-              <div className="text-xs text-forest-800/60">
+              <div className="text-xs text-ocean-800/60">
                 по актуални котировки
               </div>
             </div>

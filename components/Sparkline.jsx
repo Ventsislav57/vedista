@@ -1,4 +1,4 @@
-export default function Sparkline({ data, stroke = "#74c69d", className = "" }) {
+export default function Sparkline({ data, stroke = "#6fa8d0", className = "" }) {
   const w = 120;
   const h = 36;
   const min = Math.min(...data);

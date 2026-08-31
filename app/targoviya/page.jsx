@@ -33,9 +33,9 @@ export default function TradePage() {
         <div className="grid gap-6 md:grid-cols-2">
           {tradeCategories.map((cat, i) => (
             <Reveal key={cat.key} delay={(i % 2) * 0.08}>
-              <div className="group h-full overflow-hidden rounded-3xl border border-forest-900/10 bg-cream transition-all duration-300 hover:-translate-y-1.5 hover:border-wheat-400/60 hover:shadow-lift">
+              <div className="group h-full overflow-hidden rounded-3xl border border-ocean-900/10 bg-cream transition-all duration-300 hover:-translate-y-1.5 hover:border-wheat-400/60 hover:shadow-lift">
                 {cat.crops.length > 0 && (
-                  <div className="grid grid-cols-3 gap-px bg-forest-900/10">
+                  <div className="grid grid-cols-3 gap-px bg-ocean-900/10">
                     {cat.crops.map((slug) => {
                       const c = crops.find((x) => x.slug === slug);
                       return (
@@ -51,13 +51,13 @@ export default function TradePage() {
                   </div>
                 )}
                 <div className="p-7">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-forest-900 text-wheat-400 transition-colors group-hover:bg-wheat-500 group-hover:text-forest-950">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-ocean-900 text-wheat-400 transition-colors group-hover:bg-wheat-500 group-hover:text-ocean-950">
                     <Icon name={cat.icon} className="h-6 w-6" />
                   </div>
-                  <h3 className="mt-5 font-display text-xl text-forest-900">
+                  <h3 className="mt-5 font-display text-xl text-ocean-900">
                     {cat.title}
                   </h3>
-                  <p className="mt-2.5 text-sm leading-relaxed text-forest-800/70">
+                  <p className="mt-2.5 text-sm leading-relaxed text-ocean-800/70">
                     {cat.text}
                   </p>
                 </div>
@@ -67,14 +67,14 @@ export default function TradePage() {
         </div>
 
         <Reveal delay={0.1}>
-          <div className="mt-14 rounded-3xl border border-forest-900/10 bg-sand/50 p-8 text-center sm:p-10">
-            <p className="mx-auto max-w-2xl text-lg leading-relaxed text-forest-800/80">
+          <div className="mt-14 rounded-3xl border border-ocean-900/10 bg-sand/50 p-8 text-center sm:p-10">
+            <p className="mx-auto max-w-2xl text-lg leading-relaxed text-ocean-800/80">
               За конкретен продукт, количество или възможност за продажба се
               свържете с нашия екип — ще обсъдим условията индивидуално.
             </p>
             <Link
               href="/kontakti"
-              className="group mt-6 inline-flex items-center gap-2 rounded-full bg-forest-900 px-7 py-3.5 text-sm font-semibold text-cream transition-transform duration-300 hover:-translate-y-0.5"
+              className="group mt-6 inline-flex items-center gap-2 rounded-full bg-ocean-900 px-7 py-3.5 text-sm font-semibold text-cream transition-transform duration-300 hover:-translate-y-0.5"
             >
               Изпратете запитване
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />

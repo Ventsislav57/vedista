@@ -71,14 +71,14 @@ export default function HomePage() {
               {values.map((v, i) => (
                 <Reveal key={v.title} delay={i * 0.08}>
                   <div className="flex gap-3">
-                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-forest-900/8 text-forest-700">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-ocean-900/8 text-ocean-700">
                       <Icon name={v.icon} className="h-5 w-5" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-forest-900">
+                      <h3 className="font-semibold text-ocean-900">
                         {v.title}
                       </h3>
-                      <p className="mt-1 text-sm leading-relaxed text-forest-800/70">
+                      <p className="mt-1 text-sm leading-relaxed text-ocean-800/70">
                         {v.text}
                       </p>
                     </div>
@@ -89,7 +89,7 @@ export default function HomePage() {
             <Reveal delay={0.2}>
               <Link
                 href="/za-nas"
-                className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-forest-700 transition-colors hover:text-wheat-600"
+                className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-ocean-700 transition-colors hover:text-wheat-600"
               >
                 Повече за компанията
                 <ArrowRight className="h-4 w-4" />
@@ -110,14 +110,14 @@ export default function HomePage() {
           <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {howWeWork.map((p, i) => (
               <Reveal key={p.step} delay={i * 0.1}>
-                <div className="relative h-full rounded-3xl border border-forest-900/10 bg-cream p-7">
+                <div className="relative h-full rounded-3xl border border-ocean-900/10 bg-cream p-7">
                   <span className="font-display text-5xl text-sand-dark">
                     {p.step}
                   </span>
-                  <h3 className="mt-3 font-display text-xl text-forest-900">
+                  <h3 className="mt-3 font-display text-xl text-ocean-900">
                     {p.title}
                   </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-forest-800/70">
+                  <p className="mt-2 text-sm leading-relaxed text-ocean-800/70">
                     {p.text}
                   </p>
                 </div>
@@ -138,18 +138,18 @@ export default function HomePage() {
             <Reveal key={s.title} delay={(i % 4) * 0.07}>
               <Link
                 href={s.href}
-                className="group flex h-full flex-col rounded-3xl border border-forest-900/10 bg-cream p-7 transition-all duration-300 hover:-translate-y-1.5 hover:border-wheat-400/60 hover:shadow-lift"
+                className="group flex h-full flex-col rounded-3xl border border-ocean-900/10 bg-cream p-7 transition-all duration-300 hover:-translate-y-1.5 hover:border-wheat-400/60 hover:shadow-lift"
               >
-                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-forest-900 text-wheat-400 transition-colors group-hover:bg-wheat-500 group-hover:text-forest-950">
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-ocean-900 text-wheat-400 transition-colors group-hover:bg-wheat-500 group-hover:text-ocean-950">
                   <Icon name={s.icon} className="h-6 w-6" />
                 </div>
-                <h3 className="mt-5 font-display text-xl text-forest-900">
+                <h3 className="mt-5 font-display text-xl text-ocean-900">
                   {s.title}
                 </h3>
-                <p className="mt-2.5 flex-1 text-sm leading-relaxed text-forest-800/70">
+                <p className="mt-2.5 flex-1 text-sm leading-relaxed text-ocean-800/70">
                   {s.text}
                 </p>
-                <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-forest-700">
+                <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-ocean-700">
                   Научете повече
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </span>

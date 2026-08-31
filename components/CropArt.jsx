@@ -27,7 +27,7 @@ const motifs = {
     <g fill={c} stroke={c} strokeWidth="2">
       <path d="M0 120 C -4 60 -4 10 0 -30" fill="none" strokeWidth="3" />
       <ellipse cx="0" cy="10" rx="15" ry="46" />
-      <g stroke="#0c1f17" strokeWidth="1" opacity="0.35">
+      <g stroke="#0b1a2b" strokeWidth="1" opacity="0.35">
         <path d="M0 -34 V54 M-8 -28 V50 M8 -28 V50" fill="none" />
       </g>
       <path d="M0 -20 q -34 -6 -46 22 q 30 -2 46 -22" opacity="0.7" />
@@ -79,8 +79,8 @@ export default function CropArt({ slug, accent = "#e3a72f", className = "" }) {
     <svg viewBox="0 0 400 300" className={className} role="img" aria-label="Илюстрация на културата">
       <defs>
         <linearGradient id={`bg-${slug}`} x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stopColor="#163628" />
-          <stop offset="1" stopColor="#2d6a4f" />
+          <stop offset="0" stopColor="#1a3a56" />
+          <stop offset="1" stopColor="#2f6796" />
         </linearGradient>
       </defs>
       <rect width="400" height="300" fill={`url(#bg-${slug})`} />
@@ -88,7 +88,7 @@ export default function CropArt({ slug, accent = "#e3a72f", className = "" }) {
       <g transform="translate(90 250)">{motif(accent)}</g>
       <g transform="translate(200 260) scale(1.15)">{motif(accent)}</g>
       <g transform="translate(300 250)">{motif(accent)}</g>
-      <rect y="262" width="400" height="38" fill="#10281e" />
+      <rect y="262" width="400" height="38" fill="#0f2438" />
     </svg>
   );
 }

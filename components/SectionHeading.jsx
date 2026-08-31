@@ -8,8 +8,8 @@ export default function SectionHeading({
   tone = "dark",
 }) {
   const alignCls = align === "center" ? "mx-auto text-center items-center" : "";
-  const titleColor = tone === "light" ? "text-cream" : "text-forest-900";
-  const introColor = tone === "light" ? "text-cream/70" : "text-forest-800/70";
+  const titleColor = tone === "light" ? "text-cream" : "text-ocean-900";
+  const introColor = tone === "light" ? "text-cream/70" : "text-ocean-800/70";
 
   return (
     <div className={`flex max-w-2xl flex-col gap-4 ${alignCls}`}>

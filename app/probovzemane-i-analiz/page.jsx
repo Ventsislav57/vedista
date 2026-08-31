@@ -42,14 +42,14 @@ export default function SamplingPage() {
         <div className="grid gap-6 md:grid-cols-3">
           {steps.map((s, i) => (
             <Reveal key={s.title} delay={i * 0.1}>
-              <div className="h-full rounded-3xl border border-forest-900/10 bg-cream p-7">
-                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-forest-900 text-wheat-400">
+              <div className="h-full rounded-3xl border border-ocean-900/10 bg-cream p-7">
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-ocean-900 text-wheat-400">
                   <Icon name={s.icon} className="h-6 w-6" />
                 </div>
-                <h3 className="mt-5 font-display text-xl text-forest-900">
+                <h3 className="mt-5 font-display text-xl text-ocean-900">
                   {s.title}
                 </h3>
-                <p className="mt-2.5 text-sm leading-relaxed text-forest-800/70">
+                <p className="mt-2.5 text-sm leading-relaxed text-ocean-800/70">
                   {s.text}
                 </p>
               </div>
@@ -65,7 +65,7 @@ export default function SamplingPage() {
             title="Прозрачност още преди финализиране на сделката"
           />
           <Reveal delay={0.08}>
-            <p className="mt-6 text-lg leading-relaxed text-forest-800/80">
+            <p className="mt-6 text-lg leading-relaxed text-ocean-800/80">
               Въз основа на резултатите от анализа можем да предложим
               най-конкретна и коректна цена, съобразена с реалното качество
               на стоката и актуалните пазарни условия. По този начин

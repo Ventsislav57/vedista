@@ -51,7 +51,7 @@ export default function Navbar() {
           <Logo className="h-9 w-9" />
           <span
             className={`font-display text-xl tracking-tight transition-colors ${
-              onDark || open ? "text-cream" : "text-forest-900"
+              onDark || open ? "text-cream" : "text-ocean-900"
             }`}
           >
             {company.name}
@@ -74,8 +74,8 @@ export default function Navbar() {
                       ? "text-cream"
                       : "text-cream/70 hover:text-cream"
                     : active
-                    ? "text-forest-900"
-                    : "text-forest-800/70 hover:text-forest-900"
+                    ? "text-ocean-900"
+                    : "text-ocean-800/70 hover:text-ocean-900"
                 }`}
               >
                 {item.label}
@@ -96,8 +96,8 @@ export default function Navbar() {
             href="/kontakti"
             className={`shrink-0 rounded-full px-5 py-2.5 text-sm font-semibold shadow-soft transition-transform duration-300 hover:-translate-y-0.5 ${
               onDark
-                ? "bg-wheat-500 text-forest-950 hover:bg-wheat-400"
-                : "bg-forest-900 text-cream hover:bg-forest-800"
+                ? "bg-wheat-500 text-ocean-950 hover:bg-wheat-400"
+                : "bg-ocean-900 text-cream hover:bg-ocean-800"
             }`}
           >
             Изпратете запитване
@@ -113,7 +113,7 @@ export default function Navbar() {
           className={`relative z-10 flex h-11 w-11 items-center justify-center rounded-full border transition-colors lg:hidden ${
             onDark && !open
               ? "border-cream/40 bg-cream/15 text-cream"
-              : "border-forest-900/20 bg-forest-900 text-cream"
+              : "border-ocean-900/20 bg-ocean-900 text-cream"
           }`}
         >
           {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -131,7 +131,7 @@ export default function Navbar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.25 }}
-            className="fixed inset-0 z-0 bg-forest-950/95 backdrop-blur-lg lg:hidden"
+            className="fixed inset-0 z-0 bg-ocean-950/95 backdrop-blur-lg lg:hidden"
           >
             <div className="flex h-full flex-col justify-center px-8">
               <nav className="flex flex-col gap-1">
@@ -161,7 +161,7 @@ export default function Navbar() {
                 <Link
                   href="/kontakti"
                   onClick={() => setOpen(false)}
-                  className="rounded-full bg-wheat-500 px-6 py-3 text-center text-sm font-semibold text-forest-950"
+                  className="rounded-full bg-wheat-500 px-6 py-3 text-center text-sm font-semibold text-ocean-950"
                 >
                   Изпратете запитване
                 </Link>

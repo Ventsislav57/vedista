@@ -46,12 +46,12 @@ export default function AboutPage() {
               {values.map((v, i) => (
                 <Reveal key={v.title} delay={i * 0.08}>
                   <div className="flex gap-4">
-                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-forest-900 text-wheat-400">
+                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-ocean-900 text-wheat-400">
                       <Icon name={v.icon} className="h-5 w-5" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-forest-900">{v.title}</h3>
-                      <p className="mt-1 text-sm leading-relaxed text-forest-800/70">
+                      <h3 className="font-semibold text-ocean-900">{v.title}</h3>
+                      <p className="mt-1 text-sm leading-relaxed text-ocean-800/70">
                         {v.text}
                       </p>
                     </div>
@@ -71,14 +71,14 @@ export default function AboutPage() {
         <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {howWeWork.map((p, i) => (
             <Reveal key={p.step} delay={i * 0.1}>
-              <div className="relative h-full rounded-3xl border border-forest-900/10 bg-cream p-7">
+              <div className="relative h-full rounded-3xl border border-ocean-900/10 bg-cream p-7">
                 <span className="font-display text-5xl text-sand-dark">
                   {p.step}
                 </span>
-                <h3 className="mt-3 font-display text-xl text-forest-900">
+                <h3 className="mt-3 font-display text-xl text-ocean-900">
                   {p.title}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-forest-800/70">
+                <p className="mt-2 text-sm leading-relaxed text-ocean-800/70">
                   {p.text}
                 </p>
               </div>

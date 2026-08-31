@@ -6,16 +6,16 @@ import Reveal from "@/components/Reveal";
 import Sparkline from "@/components/Sparkline";
 import { priceBoard } from "@/lib/site";
 
-const UP = "#74c69d";
+const UP = "#6fa8d0";
 const DOWN = "#e88a6f";
 
 export default function PriceBoard() {
   return (
     <section
       id="ceni"
-      className="grain relative scroll-mt-20 overflow-hidden bg-forest-950 py-20 text-cream lg:py-28"
+      className="grain relative scroll-mt-20 overflow-hidden bg-ocean-950 py-20 text-cream lg:py-28"
     >
-      <div className="pointer-events-none absolute -left-24 top-0 h-80 w-80 rounded-full bg-forest-600/25 blur-3xl" />
+      <div className="pointer-events-none absolute -left-24 top-0 h-80 w-80 rounded-full bg-ocean-600/25 blur-3xl" />
       <div className="pointer-events-none absolute -right-20 bottom-0 h-80 w-80 rounded-full bg-wheat-500/12 blur-3xl" />
 
       <div className="relative z-10 mx-auto max-w-7xl px-5 sm:px-8">
@@ -36,8 +36,8 @@ export default function PriceBoard() {
           <Reveal delay={0.1}>
             <div className="flex items-center gap-2.5 rounded-full border border-cream/15 bg-cream/5 px-4 py-2 text-sm text-cream/70">
               <span className="relative flex h-2 w-2">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-forest-400 opacity-75" />
-                <span className="relative inline-flex h-2 w-2 rounded-full bg-forest-400" />
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-ocean-400 opacity-75" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-ocean-400" />
               </span>
               Обновено {priceBoard.updatedAt}
             </div>
@@ -51,7 +51,7 @@ export default function PriceBoard() {
             const Arrow = up ? ArrowUpRight : ArrowDownRight;
             return (
               <Reveal key={it.key} delay={(i % 3) * 0.07} direction="up">
-                <div className="group relative overflow-hidden rounded-3xl border border-cream/12 bg-forest-900/60 p-6 transition-colors duration-300 hover:border-wheat-400/40">
+                <div className="group relative overflow-hidden rounded-3xl border border-cream/12 bg-ocean-900/60 p-6 transition-colors duration-300 hover:border-wheat-400/40">
                   <div className="flex items-start justify-between gap-3">
                     <div>
                       <h3 className="font-display text-xl text-cream">{it.name}</h3>
@@ -92,7 +92,7 @@ export default function PriceBoard() {
             </p>
             <Link
               href="/kontakti"
-              className="group inline-flex shrink-0 items-center gap-2 rounded-full bg-wheat-500 px-6 py-3 text-sm font-semibold text-forest-950 transition-transform duration-300 hover:-translate-y-0.5"
+              className="group inline-flex shrink-0 items-center gap-2 rounded-full bg-wheat-500 px-6 py-3 text-sm font-semibold text-ocean-950 transition-transform duration-300 hover:-translate-y-0.5"
             >
               Поискайте обвързваща оферта
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />

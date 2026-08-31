@@ -37,14 +37,14 @@ export default function LogisticsPage() {
         <div className="grid gap-6 md:grid-cols-2">
           {options.map((o, i) => (
             <Reveal key={o.title} delay={i * 0.1}>
-              <div className="h-full rounded-3xl border border-forest-900/10 bg-cream p-8">
-                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-forest-900 text-wheat-400">
+              <div className="h-full rounded-3xl border border-ocean-900/10 bg-cream p-8">
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-ocean-900 text-wheat-400">
                   <Icon name={o.icon} className="h-6 w-6" />
                 </div>
-                <h3 className="mt-5 font-display text-xl text-forest-900">
+                <h3 className="mt-5 font-display text-xl text-ocean-900">
                   {o.title}
                 </h3>
-                <p className="mt-2.5 text-sm leading-relaxed text-forest-800/70">
+                <p className="mt-2.5 text-sm leading-relaxed text-ocean-800/70">
                   {o.text}
                 </p>
               </div>
@@ -61,7 +61,7 @@ export default function LogisticsPage() {
             align="center"
           />
           <Reveal delay={0.08}>
-            <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-forest-800/80">
+            <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-ocean-800/80">
               По този начин предлагаме гъвкав подход и възможност всеки
               клиент да избере най-подходящия вариант за транспортиране на
               своята продукция.

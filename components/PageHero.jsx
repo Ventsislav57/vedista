@@ -1,8 +1,8 @@
 export default function PageHero({ eyebrow, title, intro, children }) {
   return (
-    <section className="grain relative overflow-hidden bg-gradient-to-b from-forest-950 to-forest-800 pt-36 pb-20 text-cream sm:pt-44 sm:pb-28">
+    <section className="grain relative overflow-hidden bg-gradient-to-b from-ocean-950 to-ocean-800 pt-36 pb-20 text-cream sm:pt-44 sm:pb-28">
       <div className="pointer-events-none absolute -right-32 top-0 h-96 w-96 rounded-full bg-wheat-500/15 blur-3xl" />
-      <div className="pointer-events-none absolute -left-24 bottom-0 h-80 w-80 rounded-full bg-forest-600/25 blur-3xl" />
+      <div className="pointer-events-none absolute -left-24 bottom-0 h-80 w-80 rounded-full bg-ocean-600/25 blur-3xl" />
       <div className="relative z-10 mx-auto max-w-7xl px-5 sm:px-8">
         <span
           className="rise eyebrow flex items-center gap-3 text-wheat-300"

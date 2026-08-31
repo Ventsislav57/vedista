@@ -9,14 +9,14 @@ export default function OgCard() {
         alignItems: "center",
         justifyContent: "center",
         backgroundImage:
-          "linear-gradient(135deg, #0c1f17 0%, #163628 55%, #2d6a4f 100%)",
+          "linear-gradient(135deg, #0b1a2b 0%, #1a3a56 55%, #2f6796 100%)",
         padding: "80px",
       }}
     >
       <div style={{ display: "flex", alignItems: "center", gap: 24 }}>
         <svg width="84" height="84" viewBox="0 0 48 48" fill="none">
           <circle cx="24" cy="24" r="23" fill="#fbf7ee" />
-          <g stroke="#1b4332" strokeWidth="2.6" strokeLinecap="round">
+          <g stroke="#235079" strokeWidth="2.6" strokeLinecap="round">
             <path d="M24 38V15" />
           </g>
           <path d="M24 16c-2.6-1-4-3.4-4-6.5C22.6 10.5 24 12.9 24 16Z" fill="#e3a72f" />
