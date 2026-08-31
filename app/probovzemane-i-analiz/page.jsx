@@ -8,6 +8,7 @@ export const metadata = {
   title: "Пробовземане и анализ",
   description:
     "Преди всяка покупка Vedista извършва пробовземане и лабораторен анализ на основните качествени показатели на зърнената продукция.",
+  alternates: { canonical: "/probovzemane-i-analiz" },
 };
 
 const steps = [

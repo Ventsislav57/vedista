@@ -12,6 +12,7 @@ export const metadata = {
   title: "Търговия",
   description:
     "Vedista търгува със зърнени култури, маслодайни семена, шротове и фуражни суровини според актуалното пазарно търсене.",
+  alternates: { canonical: "/targoviya" },
 };
 
 export default function TradePage() {

@@ -8,6 +8,7 @@ export const metadata = {
   title: "Международна търговия",
   description:
     "Vedista поддържа партньорства с търговски компании от региона и следи възможностите за реализация на земеделска продукция на близките пазари.",
+  alternates: { canonical: "/mezhdunarodna-targoviya" },
 };
 
 const points = [
@@ -42,7 +43,11 @@ export default function InternationalTradePage() {
           <Reveal direction="left">
             <div className="relative overflow-hidden rounded-[2rem] border border-forest-900/10 bg-forest-900 p-10 sm:p-14">
               <div className="pointer-events-none absolute -right-10 -top-10 h-56 w-56 rounded-full bg-wheat-500/15 blur-3xl" />
-              <svg viewBox="0 0 300 220" className="relative z-10 h-full w-full">
+              <svg
+                viewBox="0 0 300 220"
+                className="relative z-10 h-full w-full"
+                aria-hidden="true"
+              >
                 <circle cx="150" cy="110" r="86" fill="none" stroke="#2d6a4f" strokeWidth="1.5" />
                 <ellipse cx="150" cy="110" rx="86" ry="34" fill="none" stroke="#2d6a4f" strokeWidth="1.2" />
                 <ellipse cx="150" cy="110" rx="40" ry="86" fill="none" stroke="#2d6a4f" strokeWidth="1.2" />

@@ -12,6 +12,7 @@ export default function ScrollProgress() {
 
   return (
     <motion.div
+      aria-hidden="true"
       style={{ scaleX }}
       className="fixed left-0 right-0 top-0 z-[60] h-[3px] origin-left bg-gradient-to-r from-wheat-500 via-wheat-400 to-forest-500"
     />

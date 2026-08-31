@@ -27,6 +27,15 @@ export default function Navbar() {
     };
   }, [open]);
 
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e) => {
+      if (e.key === "Escape") setOpen(false);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [open]);
+
   const onDark = !scrolled && !open;
 
   return (
@@ -97,7 +106,9 @@ export default function Navbar() {
 
         <button
           type="button"
-          aria-label="Меню"
+          aria-label={open ? "Затвори менюто" : "Отвори менюто"}
+          aria-expanded={open}
+          aria-controls="mobile-menu"
           onClick={() => setOpen((v) => !v)}
           className={`relative z-10 flex h-11 w-11 items-center justify-center rounded-full border transition-colors lg:hidden ${
             onDark && !open
@@ -112,6 +123,10 @@ export default function Navbar() {
       <AnimatePresence>
         {open && (
           <motion.div
+            id="mobile-menu"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Основно меню"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}

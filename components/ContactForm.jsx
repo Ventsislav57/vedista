@@ -4,7 +4,24 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Check, Send } from "lucide-react";
 
-const crops = ["Пшеница", "Царевица", "Слънчоглед", "Ечемик", "Рапица", "Друго"];
+const productGroups = [
+  {
+    label: "Зърнени култури",
+    options: ["Пшеница", "Царевица", "Ечемик", "Ръж", "Овес", "Тритикале"],
+  },
+  {
+    label: "Маслодайни култури",
+    options: ["Слънчоглед", "Рапица", "Соя"],
+  },
+  {
+    label: "Шротове и протеинови суровини",
+    options: ["Слънчогледов шрот", "Соев шрот", "Рапичен шрот"],
+  },
+  {
+    label: "Друго",
+    options: ["Друга фуражна суровина"],
+  },
+];
 
 export default function ContactForm() {
   const [sent, setSent] = useState(false);
@@ -32,8 +49,8 @@ export default function ContactForm() {
               Благодарим!
             </h3>
             <p className="mt-2 max-w-sm text-sm text-forest-800/70">
-              Получихме запитването ви. Търговец от екипа ще се свърже с вас до
-              един работен ден.
+              Получихме запитването ви. Ще се свържем с вас възможно
+              най-скоро.
             </p>
             <button
               onClick={() => setSent(false)}
@@ -60,13 +77,21 @@ export default function ContactForm() {
             </div>
             <div className="grid gap-5 sm:grid-cols-2">
               <label className="text-sm">
-                <span className="font-medium text-forest-900">Култура</span>
+                <span className="font-medium text-forest-900">Продукт</span>
                 <select
-                  name="crop"
+                  name="product"
+                  defaultValue=""
                   className="mt-1.5 w-full rounded-xl border border-forest-900/15 bg-cream px-4 py-2.5 text-sm outline-none focus:border-wheat-500"
                 >
-                  {crops.map((c) => (
-                    <option key={c}>{c}</option>
+                  <option value="" disabled>
+                    Изберете продукт
+                  </option>
+                  {productGroups.map((g) => (
+                    <optgroup key={g.label} label={g.label}>
+                      {g.options.map((o) => (
+                        <option key={o}>{o}</option>
+                      ))}
+                    </optgroup>
                   ))}
                 </select>
               </label>

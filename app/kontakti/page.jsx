@@ -9,6 +9,7 @@ export const metadata = {
   title: "Контакти",
   description:
     "Свържете се с екипа на Vedista за оферта или запитване относно покупка, продажба или транспорт на земеделска продукция.",
+  alternates: { canonical: "/kontakti" },
 };
 
 export default function ContactPage() {

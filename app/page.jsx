@@ -54,6 +54,7 @@ export default function HomePage() {
                 src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1000&q=80"
                 alt="Ръкостискане в житно поле — сделка между земеделец и търговец"
                 fill
+                priority
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
               />

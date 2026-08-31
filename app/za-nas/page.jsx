@@ -10,6 +10,7 @@ export const metadata = {
   title: "За нас",
   description:
     "Vedista — надежден партньор в търговията със зърнени култури, маслодайни семена и фуражни суровини.",
+  alternates: { canonical: "/za-nas" },
 };
 
 export default function AboutPage() {
@@ -29,6 +30,7 @@ export default function AboutPage() {
                 src="https://images.unsplash.com/photo-1560493676-04071c5f467b?auto=format&fit=crop&w=1000&q=80"
                 alt="Житно поле по залез"
                 fill
+                priority
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
               />

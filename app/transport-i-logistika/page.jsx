@@ -8,6 +8,7 @@ export const metadata = {
   title: "Транспорт и логистика",
   description:
     "Vedista организира транспорта и логистиката по сделките според конкретните условия и договорености — или координира взимане/доставка със собствен транспорт на клиента.",
+  alternates: { canonical: "/transport-i-logistika" },
 };
 
 const options = [

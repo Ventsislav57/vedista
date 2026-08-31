@@ -35,6 +35,9 @@ export const metadata = {
     "слънчоглед",
     "Vedista",
   ],
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: "Vedista — Търговия със зърнени и маслодайни култури",
     description:
@@ -43,15 +46,52 @@ export const metadata = {
     locale: "bg_BG",
     siteName: "Vedista",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Vedista — Търговия със зърнени и маслодайни култури",
+    description:
+      "Изкупуване и търговия със зърнени култури, маслодайни семена и фуражни суровини — в България и региона.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  formatDetection: {
+    telephone: false,
+  },
+};
+
+export const viewport = {
+  themeColor: "#10281e",
+};
+
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Vedista",
+  url: "https://vedista.bg",
+  description:
+    "Vedista изкупува и търгува със зърнени култури, маслодайни семена и фуражни суровини.",
+  logo: "https://vedista.bg/icon",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="bg" className={`${inter.variable} ${playfair.variable}`}>
       <body className="min-h-screen bg-cream text-ink antialiased">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-wheat-500 focus:px-5 focus:py-3 focus:text-sm focus:font-semibold focus:text-forest-950"
+        >
+          Към съдържанието
+        </a>
         <ScrollProgress />
         <Navbar />
-        <main>{children}</main>
+        <main id="main-content">{children}</main>
         <Footer />
       </body>
     </html>
