@@ -1,3 +1,12 @@
+import fs from "node:fs";
+import path from "node:path";
+
+function badgeDataUri() {
+  const file = path.join(process.cwd(), "public", "logo-badge.png");
+  const base64 = fs.readFileSync(file).toString("base64");
+  return `data:image/png;base64,${base64}`;
+}
+
 export default function OgCard() {
   return (
     <div
@@ -14,18 +23,8 @@ export default function OgCard() {
       }}
     >
       <div style={{ display: "flex", alignItems: "center", gap: 24 }}>
-        <svg width="84" height="84" viewBox="0 0 48 48" fill="none">
-          <circle cx="24" cy="24" r="23" fill="#fbf7ee" />
-          <g stroke="#235079" strokeWidth="2.6" strokeLinecap="round">
-            <path d="M24 38V15" />
-          </g>
-          <path d="M24 16c-2.6-1-4-3.4-4-6.5C22.6 10.5 24 12.9 24 16Z" fill="#e3a72f" />
-          <path d="M24 16c2.6-1 4-3.4 4-6.5C25.4 10.5 24 12.9 24 16Z" fill="#c98a1f" />
-          <path d="M24 23c-3-1-4.7-3.6-4.7-7C22.3 17 24 19.6 24 23Z" fill="#e3a72f" />
-          <path d="M24 23c3-1 4.7-3.6 4.7-7C25.7 17 24 19.6 24 23Z" fill="#c98a1f" />
-          <path d="M24 30c-3.2-1-5-3.8-5-7.4C21.8 23.6 24 26.4 24 30Z" fill="#e3a72f" />
-          <path d="M24 30c3.2-1 5-3.8 5-7.4C26.2 23.6 24 26.4 24 30Z" fill="#c98a1f" />
-        </svg>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src={badgeDataUri()} width={92} height={92} alt="" />
         <span
           style={{
             fontSize: 76,
