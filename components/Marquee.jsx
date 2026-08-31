@@ -1,7 +1,20 @@
-import { partners } from "@/lib/site";
+const defaultItems = [
+  "Пшеница",
+  "Царевица",
+  "Ечемик",
+  "Ръж",
+  "Овес",
+  "Тритикале",
+  "Слънчоглед",
+  "Рапица",
+  "Соя",
+  "Слънчогледов шрот",
+  "Соев шрот",
+  "Рапичен шрот",
+];
 
-export default function Marquee() {
-  const row = [...partners, ...partners];
+export default function Marquee({ items = defaultItems }) {
+  const row = [...items, ...items];
   return (
     <div className="relative flex overflow-hidden border-y border-forest-900/10 bg-sand/50 py-6">
       <div className="animate-marquee flex shrink-0 items-center gap-16 pr-16">

@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { nav, company } from "@/lib/site";
 import Logo from "@/components/Logo";
 
@@ -49,7 +49,7 @@ export default function Navbar() {
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-1 lg:flex">
+        <nav className="hidden items-center xl:gap-0.5 lg:flex">
           {nav.map((item) => {
             const active =
               item.href === "/"
@@ -59,7 +59,7 @@ export default function Navbar() {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`relative rounded-full px-3.5 py-2 text-sm font-medium transition-colors ${
+                className={`relative whitespace-nowrap rounded-full px-2.5 py-2 text-[0.82rem] font-medium transition-colors xl:text-sm ${
                   onDark
                     ? active
                       ? "text-cream"
@@ -83,26 +83,15 @@ export default function Navbar() {
         </nav>
 
         <div className="hidden items-center gap-3 lg:flex">
-          <a
-            href={company.phoneHref}
-            className={`flex items-center gap-2 text-sm font-medium transition-colors ${
-              onDark
-                ? "text-cream/80 hover:text-cream"
-                : "text-forest-800/80 hover:text-forest-900"
-            }`}
-          >
-            <Phone className="h-4 w-4" strokeWidth={1.8} />
-            {company.phone}
-          </a>
           <Link
             href="/kontakti"
-            className={`rounded-full px-5 py-2.5 text-sm font-semibold shadow-soft transition-transform duration-300 hover:-translate-y-0.5 ${
+            className={`shrink-0 rounded-full px-5 py-2.5 text-sm font-semibold shadow-soft transition-transform duration-300 hover:-translate-y-0.5 ${
               onDark
                 ? "bg-wheat-500 text-forest-950 hover:bg-wheat-400"
                 : "bg-forest-900 text-cream hover:bg-forest-800"
             }`}
           >
-            Оферта за зърно
+            Изпратете запитване
           </Link>
         </div>
 
@@ -154,18 +143,12 @@ export default function Navbar() {
                 transition={{ delay: 0.5 }}
                 className="mt-10 flex flex-col gap-4"
               >
-                <a
-                  href={company.phoneHref}
-                  className="flex items-center gap-2 text-cream/80"
-                >
-                  <Phone className="h-4 w-4" /> {company.phone}
-                </a>
                 <Link
                   href="/kontakti"
                   onClick={() => setOpen(false)}
                   className="rounded-full bg-wheat-500 px-6 py-3 text-center text-sm font-semibold text-forest-950"
                 >
-                  Оферта за зърно
+                  Изпратете запитване
                 </Link>
               </motion.div>
             </div>

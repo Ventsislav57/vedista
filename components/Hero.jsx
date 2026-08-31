@@ -3,8 +3,7 @@
 import Link from "next/link";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import { ArrowRight, Wheat, TrendingUp } from "lucide-react";
-import { company } from "@/lib/site";
+import { ArrowRight, Wheat, LineChart } from "lucide-react";
 
 function Stalk({ x, y = 330, delay, scale = 1, tone = "#e3a72f" }) {
   return (
@@ -42,6 +41,8 @@ function Stalk({ x, y = 330, delay, scale = 1, tone = "#e3a72f" }) {
   );
 }
 
+const categories = ["Зърнени култури", "Маслодайни култури", "Шротове", "Фуражни суровини"];
+
 export default function Hero() {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -66,7 +67,7 @@ export default function Hero() {
             style={{ animationDelay: "0.05s" }}
           >
             <Wheat className="h-3.5 w-3.5" strokeWidth={2} />
-            Реколта 2025 · приемаме заявки за форуърд
+            Търговия със земеделска продукция
           </span>
 
           <h1
@@ -102,9 +103,10 @@ export default function Hero() {
             className="rise mt-7 max-w-lg text-lg leading-relaxed text-cream/75"
             style={{ animationDelay: "0.3s" }}
           >
-            {company.name} свързва българското поле с пазара — изкупуване и
-            търговия със зърно, съхранение, логистика и агрономическо обслужване
-            под един покрив.
+            Vedista развива дейност в областта на изкупуването и търговията
+            със зърнени култури, маслодайни семена и фуражни суровини. Следим
+            активно пазарните условия, за да предложим коректна цена и добра
+            организация на всяка сделка.
           </p>
 
           <div
@@ -115,30 +117,28 @@ export default function Hero() {
               href="/kontakti"
               className="group flex items-center gap-2 rounded-full bg-wheat-500 px-7 py-3.5 text-sm font-semibold text-forest-950 shadow-lift transition-transform duration-300 hover:-translate-y-0.5"
             >
-              Поискайте оферта
+              Изпратете запитване
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Link>
             <Link
-              href="/deynosti"
+              href="/targoviya"
               className="flex items-center gap-2 rounded-full border border-cream/25 px-7 py-3.5 text-sm font-semibold text-cream transition-colors hover:bg-cream/10"
             >
-              Нашите дейности
+              С какво търгуваме
             </Link>
           </div>
 
           <div
-            className="rise mt-12 flex flex-wrap gap-x-8 gap-y-4"
+            className="rise mt-12 flex flex-wrap gap-2.5"
             style={{ animationDelay: "0.55s" }}
           >
-            {[
-              ["480 хил. т", "зърно годишно"],
-              ["1200+", "партньори"],
-              ["до 60 мин", "лабораторен анализ"],
-            ].map(([n, l]) => (
-              <div key={l}>
-                <div className="font-display text-2xl text-wheat-400">{n}</div>
-                <div className="text-xs text-cream/55">{l}</div>
-              </div>
+            {categories.map((c) => (
+              <span
+                key={c}
+                className="rounded-full border border-cream/15 bg-cream/5 px-3.5 py-1.5 text-xs font-medium text-cream/70"
+              >
+                {c}
+              </span>
             ))}
           </div>
         </motion.div>
@@ -186,22 +186,16 @@ export default function Hero() {
           </div>
 
           <div className="animate-floaty absolute -left-8 top-14 flex items-center gap-3 rounded-2xl bg-cream px-4 py-3 text-forest-900 shadow-lift">
-            <TrendingUp className="h-5 w-5 text-forest-600" />
+            <LineChart className="h-5 w-5 text-forest-600" />
             <div>
-              <div className="text-sm font-semibold">Форуърд цена</div>
+              <div className="text-sm font-semibold">Пазарна цена</div>
               <div className="text-xs text-forest-800/60">
-                фиксирана при сеитба
+                по актуални котировки
               </div>
             </div>
           </div>
-
-          <div className="absolute -bottom-8 right-2 rounded-2xl bg-wheat-500 px-5 py-4 text-forest-950 shadow-lift">
-            <div className="font-display text-3xl leading-none">15+</div>
-            <div className="text-xs font-medium">години на пазара</div>
-          </div>
         </motion.div>
       </div>
-
     </section>
   );
 }

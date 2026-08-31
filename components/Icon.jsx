@@ -13,6 +13,11 @@ import {
   ScrollText,
   Package,
   Tractor,
+  Globe,
+  Ship,
+  ClipboardCheck,
+  Route,
+  MapPinned,
 } from "lucide-react";
 
 const map = {
@@ -30,6 +35,11 @@ const map = {
   ScrollText,
   Package,
   Tractor,
+  Globe,
+  Ship,
+  ClipboardCheck,
+  Route,
+  MapPinned,
 };
 
 export default function Icon({ name, className }) {
